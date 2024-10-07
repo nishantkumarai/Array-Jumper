@@ -15,6 +15,7 @@ namespace Player
 	}
 	void PlayerView::drawPlayer()
 	{
+		player_image->render();
 	}
 	void PlayerView::loadPlayer()
 	{
@@ -28,7 +29,7 @@ namespace Player
 	}
 	void PlayerView::updatePlayerPosition()
 	{
-		
+		player_image->setPosition(calulcatePlayerPosition());
 	}
 	sf::Vector2f PlayerView::calulcatePlayerPosition()
 	{
