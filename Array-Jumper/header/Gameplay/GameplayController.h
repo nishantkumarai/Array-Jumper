@@ -1,43 +1,26 @@
-#include "../../header/Level/LevelController.h"
-#include "../../header/Level/LevelView.h"
-#include "../../header/Level/LevelModel.h"
-#include "../../header/Level/LevelData.h"
-#include "../../header/Main/GameService.h"
+#pragma once
+#include "../../header/Level/BlockType.h"
 
-namespace Level
+namespace Gameplay
 {
-
-	LevelController::LevelController()
+	class GameplayController
 	{
-		level_view = new LevelView(this);
-		level_model = new LevelModel();
-	}
+	private:
 
-	LevelController::~LevelController() {}
+		bool isObstacle(Level::BlockType value);
+		bool isEndBlock(Level::BlockType value);
+		void processObstacle();
+		void processEndBlock();
 
-	void LevelController::initialize()
-	{
-		level_view->initialize();
-	}
+		void gameOver();
 
-	void LevelController::update()
-	{
-		level_view->update();
-	}
+	public:
 
-	void LevelController::render()
-	{
-		level_view->render();
-	}
+		void intialize();
+		void update();
+		void render();
 
-	BoxDimensions LevelController::getBoxDimensions()
-	{
-		return level_view->getBoxDimensions();
-	}
-
-	BlockType LevelController::getCurrentBoxValue(int currentPosition)
-	{
-		return level_model->getCurrentBoxValue(currentPosition);
-	}
-
+		void onPositionChanged(int position);
+		void onDeath();
+	};
 }

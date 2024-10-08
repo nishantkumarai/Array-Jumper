@@ -10,7 +10,7 @@ namespace Level
 
 	LevelService::~LevelService() { destroy(); }
 
-	void LevelService::initialize()
+	void LevelService::intialize()
 	{
 		level_controller->initialize();
 	}
