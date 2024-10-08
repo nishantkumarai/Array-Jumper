@@ -2,9 +2,11 @@
 
 namespace Player
 {
-	void PlayerModel::initialize()
+	void Player::PlayerModel::initialize()
 	{
+		//Yet to implement
 	}
+
 	PlayerState PlayerModel::getPlayerState()
 	{
 		return player_state;
