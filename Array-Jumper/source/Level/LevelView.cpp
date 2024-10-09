@@ -94,7 +94,6 @@ namespace Level
 			sf::Vector2f position = calculateBoxPosition(i);
 			BlockType blockTypeToDraw = level_controller->getCurrentBoxValue(i);
 
-
 			drawBox(position);
 			drawBoxValue(position, blockTypeToDraw);
 		}

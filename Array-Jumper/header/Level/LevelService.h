@@ -1,6 +1,7 @@
 #pragma once
 #include "BlockType.h"
 
+
 namespace Level
 {
 	class LevelController;
@@ -16,7 +17,7 @@ namespace Level
 		LevelService();
 		~LevelService();
 
-		void initialize();
+		void intialize();
 		void update();
 		void render();
 
