@@ -2,10 +2,7 @@
 
 namespace Player
 {
-	void Player::PlayerModel::initialize()
-	{
-		//Yet to implement
-	}
+	void Player::PlayerModel::initialize() { /* Not Implemented */ }
 
 	PlayerState PlayerModel::getPlayerState()
 	{
@@ -29,8 +26,10 @@ namespace Player
 		current_position = 0;
 	}
 
-	int PlayerModel::getCurrentPosition() { return current_position; }
+	int PlayerModel::getCurrentPosition() {	return current_position; }
 	void PlayerModel::setCurrentPosition(int new_position) { current_position = new_position; }
 	void PlayerModel::decreamentLife() { current_lives--; }
 	int PlayerModel::getCurrentLives() { return current_lives; }
 }
+
+

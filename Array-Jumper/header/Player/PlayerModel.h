@@ -11,21 +11,21 @@ namespace Player
 
 	class PlayerModel
 	{
-	private:
-
+	private: 
+			
 		const int max_lives = 3;
 
 		PlayerState player_state;
 		int current_position;
 		int current_lives;
-
+			
 	public:
 
 		void initialize();
-
+			
 		PlayerState getPlayerState();
 		void setPlayerState(PlayerState new_player_state);
-
+		
 		void resetPlayer();
 		void resetPosition();
 		int getCurrentPosition();

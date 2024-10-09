@@ -15,8 +15,8 @@ namespace UI
 			const float left_offset = 100.f;
 			const float right_offset = 250.f;
 
-			UIElement::TextView* life_count_text;
-			UIElement::TextView* level_number_text;
+			UIElement::TextView*  life_count_text;
+			UIElement::TextView*  level_number_text;
 
 			void createTexts();
 			void initializeTexts();

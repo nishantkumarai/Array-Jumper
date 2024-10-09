@@ -118,7 +118,7 @@ namespace Player
 			steps = 0;
 			break;
 		}
-
+		
 		targetPosition = player_model->getCurrentPosition() + steps;
 
 		if (!isPositionInBound(targetPosition))
@@ -160,7 +160,7 @@ namespace Player
 
 	bool PlayerController::isPositionInBound(int targetPosition)
 	{
-		if (targetPosition >= 0 && targetPosition < LevelData::NUMBER_OF_BOXES)
+		if(targetPosition >= 0 && targetPosition < LevelData::NUMBER_OF_BOXES)
 			return true;
 		return false;
 	}

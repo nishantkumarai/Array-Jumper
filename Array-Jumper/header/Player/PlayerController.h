@@ -13,7 +13,7 @@ namespace Player
 	private:
 		PlayerModel* player_model;
 		PlayerView* player_view;
-
+		
 		Event::EventService* event_service;
 
 		void destroy();

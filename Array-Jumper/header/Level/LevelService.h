@@ -6,7 +6,7 @@ namespace Level
 {
 	class LevelController;
 	struct BoxDimensions;
-
+	
 	class LevelService
 	{
 	private:
@@ -30,3 +30,4 @@ namespace Level
 		void resetLevels();
 	};
 }
+

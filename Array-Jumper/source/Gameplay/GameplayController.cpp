@@ -58,7 +58,7 @@ namespace Gameplay
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::LEVEL_COMPLETE);
 
 
-		if (isLastLevel())
+		if(isLastLevel())
 		{
 			gameWon();
 			return;
@@ -66,7 +66,7 @@ namespace Gameplay
 
 		loadNextLevel();
 	}
-
+	
 	bool GameplayController::isLastLevel()
 	{
 		return ServiceLocator::getInstance()->getLevelService()->isLastLevel();

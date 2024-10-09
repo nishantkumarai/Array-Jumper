@@ -70,7 +70,7 @@ namespace UI
 		{
 			int life_count = ServiceLocator::getInstance()->getPlayerService()->getCurrentLives();
 
-			std::string life_count_string = "LIFE: " + std::to_string(life_count);
+			std::string life_count_string =  "LIFE: " + std::to_string(life_count);
 
 			life_count_text->setText(life_count_string);
 			life_count_text->update();
@@ -80,7 +80,7 @@ namespace UI
 		{
 			int level_number = ServiceLocator::getInstance()->getLevelService()->getCurrentLevelNumber();
 
-			std::string level_number_string = "LEVEL: " + std::to_string(level_number);
+			std::string level_number_string =  "LEVEL: " + std::to_string(level_number);
 
 			level_number_text->setText(level_number_string);
 			level_number_text->update();

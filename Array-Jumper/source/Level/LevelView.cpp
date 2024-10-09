@@ -1,6 +1,5 @@
 #include "../../header/Level/LevelView.h"
 #include "../../header/Level/LevelModel.h"
-#include "../../header/Level/LevelData.h"
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/Global/Config.h"
 
@@ -62,7 +61,7 @@ namespace Level
 		background_image->initialize(Config::array_jumper_bg_texture_path, game_window->getSize().x, game_window->getSize().y, sf::Vector2f(0, 0));
 		background_image->setImageAlpha(background_alpha);
 
-
+		
 		box_image->initialize(Config::box_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		target_overlay_image->initialize(Config::target_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		letter_one_overlay_image->initialize(Config::letter_one_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
@@ -84,7 +83,7 @@ namespace Level
 		obstacle_one_overlay_image->update();
 		obstacle_two_overlay_image->update();
 	}
-
+	
 	void LevelView::drawLevel()
 	{
 		background_image->render();
@@ -93,7 +92,7 @@ namespace Level
 		{
 			sf::Vector2f position = calculateBoxPosition(i);
 			BlockType blockTypeToDraw = level_controller->getCurrentBoxValue(i);
-
+			
 			drawBox(position);
 			drawBoxValue(position, blockTypeToDraw);
 		}
@@ -101,15 +100,15 @@ namespace Level
 
 	void LevelView::drawBox(sf::Vector2f position)
 	{
-		box_image->setPosition(position);
-		box_image->render();
+			box_image->setPosition(position);
+			box_image->render();
 	}
 
 	void LevelView::drawBoxValue(sf::Vector2f position, BlockType box_value)
 	{
-		ImageView* image = getBoxOverlayImage(box_value);
-		image->setPosition(position);
-		image->render();
+			ImageView* image = getBoxOverlayImage(box_value);
+			image->setPosition(position);
+			image->render();
 	}
 
 
@@ -128,16 +127,16 @@ namespace Level
 	{
 		float screenWidth = static_cast<float>(game_window->getSize().x);
 		int numBoxes = LevelData::NUMBER_OF_BOXES;
-
+		
 		//Each Box has a Gap on it's left, 1 extra gap for last block's right side
-		int numGaps = numBoxes + 1;
+		int numGaps = numBoxes + 1; 
 
 		//Total space consumed by all gaps
-		float totalSpaceByGaps = box_dimensions.box_spacing_percentage * static_cast<float>(numGaps);
+		float totalSpaceByGaps = box_dimensions.box_spacing_percentage * static_cast<float>(numGaps); 
 
 		//Total space consumed by boxes and gaps
 		float totalSpace = numBoxes + totalSpaceByGaps;
-
+		
 		box_dimensions.box_width = screenWidth / (totalSpace);
 		box_dimensions.box_height = box_dimensions.box_width;
 	}
